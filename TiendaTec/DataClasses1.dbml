@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TiendaTec" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-GG28LR0\TBD_EMHF_23;Initial Catalog=TiendaTec;Integrated Security=True" SettingsObjectName="TiendaTec.Properties.Settings" SettingsPropertyName="TiendaTecConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.ActualizarCategoriaProducto" Method="ActualizarCategoriaProducto">
+    <Parameter Name="claveCategoria" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombreCategoria" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="descripcionCategoria" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="message" Type="System.String" DbType="NVarChar(255)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.BorrarCategoriaProducto" Method="BorrarCategoriaProducto">
+    <Parameter Name="claveCategoria" Type="System.Int32" DbType="Int" />
+    <Parameter Name="message" Type="System.String" DbType="NVarChar(255)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertarCategoriaProducto" Method="InsertarCategoriaProducto">
+    <Parameter Name="nombreCategoria" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="descripcionCategoria" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="message" Type="System.String" DbType="NVarChar(255)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.MostrarCategoriaProductoPorID" Method="MostrarCategoriaProductoPorID">
+    <Parameter Name="claveCategoria" Type="System.Int32" DbType="Int" />
+    <ElementType Name="MostrarCategoriaProductoPorIDResult">
+      <Column Name="claveCategoria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombreCategoria" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="descripcionCategoria" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="fechaCreacionCategorias" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.MostrarCategoriaProducto" Method="MostrarCategoriaProducto">
+    <ElementType Name="MostrarCategoriaProductoResult">
+      <Column Name="claveCategoria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombreCategoria" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="descripcionCategoria" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="fechaCreacionCategorias" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ActualizarEmpleado" Method="ActualizarEmpleado">
+    <Parameter Name="IdEmpleados" Parameter="idEmpleados" Type="System.Int32" DbType="Int" />
+    <Parameter Name="rfcEmpleados" Type="System.String" DbType="VarChar(19)" />
+    <Parameter Name="nombreEmpleados" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="telefonoEmpleado" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="correoEmpleado" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="fechaNacimiento" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="puestoTrabajo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="fechaContratacion" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="message" Type="System.String" DbType="NVarChar(255)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.BorrarEmpleado" Method="BorrarEmpleado">
+    <Parameter Name="IdEmpleados" Parameter="idEmpleados" Type="System.Int32" DbType="Int" />
+    <Parameter Name="message" Type="System.String" DbType="NVarChar(255)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertarEmpleado" Method="InsertarEmpleado">
+    <Parameter Name="rfcEmpleados" Type="System.String" DbType="VarChar(19)" />
+    <Parameter Name="nombreEmpleados" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="telefonoEmpleado" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="correoEmpleado" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="fechaNacimiento" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="puestoTrabajo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="fechaContratacion" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="message" Type="System.String" DbType="NVarChar(255)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.MostrarEmpleado" Method="MostrarEmpleado">
+    <ElementType Name="MostrarEmpleadoResult">
+      <Column Name="IdEmpleados" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rfcEmpleados" Type="System.String" DbType="VarChar(19) NOT NULL" CanBeNull="false" />
+      <Column Name="nombreEmpleados" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="telefonoEmpleado" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="correoEmpleado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaNacimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="puestoTrabajo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fechaContratacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>
